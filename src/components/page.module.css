@@ -1,0 +1,20 @@
+.page {
+  margin: 40px auto;
+  max-width: 650px;
+  line-height: 1.6;
+  font-family: Sans-Serif;
+  font-size: 1rem;
+  color: #444;
+  background-color: #eeeeee;
+  padding: 0 10px;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
