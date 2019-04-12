@@ -5,8 +5,11 @@
   font-family: Sans-Serif;
   font-size: 1rem;
   color: #444;
-  background-color: #eeeeee;
   padding: 0 10px;
+}
+
+html {
+  background-color: #eeeeee;
 }
 
 h1 {
