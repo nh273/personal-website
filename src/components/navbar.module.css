@@ -1,0 +1,12 @@
+.navbar {
+  width: 100%;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  transition: top 0.3s;
+  background-color: #f8f8f8;
+}
+
+.navbarhidden {
+  top: -50%;
+}
