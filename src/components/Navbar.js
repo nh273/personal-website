@@ -6,13 +6,17 @@ class Navbar extends React.Component {
     super(props)
     this.state = {
       hidden: false,
-      lastScrollY: window.pageYOffset,
+      lastScrollY: 0,
     }
     this.handleScroll = this.handleScroll.bind(this)
   }
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll)
+    this.setState(
+      {lastScrollY: window.pageYOffset}
+    ); // set this state in here instead of in constructor
+    // otherwise will not build
   }
 
   componentWillUnmount() {
