@@ -13,10 +13,6 @@ class Navbar extends React.Component {
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll)
-    this.setState(
-      {lastScrollY: window.pageYOffset}
-    ); // set this state in here instead of in constructor
-    // otherwise will not build
   }
 
   componentWillUnmount() {
@@ -26,11 +22,9 @@ class Navbar extends React.Component {
   handleScroll = () => {
     let prevScrollY = this.state.lastScrollY
     let currentScrollY = window.pageYOffset
-    let jiggle = 2 // to make the scroll up & down trigger not too sensitive
-    // max position of page with cross browser compatibility
-    // https://stackoverflow.com/questions/17688595/finding-the-maximum-scroll-position-of-a-page
+    let jiggle = 5 // to make the scroll up & down trigger not too sensitive
 
-    if (currentScrollY - prevScrollY < jiggle || currentScrollY < jiggle) {
+    if (prevScrollY - currentScrollY > jiggle || currentScrollY < jiggle) {
       // Scrolling up or at top of page
       var hidden = false
     } else {
