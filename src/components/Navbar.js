@@ -22,16 +22,16 @@ class Navbar extends React.Component {
   handleScroll = () => {
     let prevScrollY = this.state.lastScrollY
     let currentScrollY = window.pageYOffset
-    let jiggle = 5 // to make the scroll up & down trigger not too sensitive
+    let newHidden = this.state.hidden
 
-    if (prevScrollY - currentScrollY > jiggle || currentScrollY < jiggle) {
-      // Scrolling up or at top of page
-      var hidden = false
+    if (currentScrollY >= prevScrollY && currentScrollY > 50) {
+      // Scrolling down & not at top of page
+      newHidden = true
     } else {
-      // Scrolling down
-      hidden = true
+      // Scrolling up
+      newHidden = false
     }
-    this.setState({ lastScrollY: currentScrollY, hidden })
+    this.setState({ lastScrollY: currentScrollY, hidden: newHidden })
   }
 
   render() {
