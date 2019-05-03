@@ -1,12 +1,12 @@
 import React from "react"
-import Page from "../components/Page"
+import PageLayout from "../components/PageLayout"
 import Navbar from "../components/Navbar"
 
 export default () => (
-  <Page>
+  <PageLayout>
     <Navbar />
     <h1>Let's Try Some Heading</h1>
-    <div>
+    <div id="content">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
       aliquam malesuada nunc, ut imperdiet urna condimentum et. Praesent
       placerat elit in massa rhoncus, vel volutpat risus efficitur. Ut neque
@@ -92,5 +92,5 @@ export default () => (
       dolor et elit gravida mattis. Proin blandit ante facilisis turpis semper,
       a cursus nulla feugiat.
     </div>
-  </Page>
+  </PageLayout>
 )
