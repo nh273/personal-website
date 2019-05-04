@@ -1,11 +1,21 @@
+<<<<<<< HEAD
 .navbar {
   text-align: center;
   height: 50px;
   width: 100%;
+=======
+.navbar,
+.navbarhidden {
+  margin: 0.1rem;
+  height: 2.5rem;
+  width: 100%;
+  padding: 0.2rem;
+>>>>>>> fb7838e59c3691fc51a7b7e9e1bb25476a1a7c46
   position: fixed;
   top: 0;
   transition: top 0.3s;
   background-color: #f8f8f8;
+  text-align: center;
 }
 
 .navbarhidden {
