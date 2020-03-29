@@ -13,7 +13,7 @@ class Navbar extends React.Component {
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll)
-    this.setState( {lastScrollY : window.pageYOffset})
+    this.setState({ lastScrollY: window.pageYOffset })
   }
 
   componentWillUnmount() {
@@ -21,7 +21,7 @@ class Navbar extends React.Component {
   }
 
   handleScroll = () => {
-    let lastScrollY = this.state.lastScrollY
+    let prevScrollY = this.state.lastScrollY
     let currentScrollY = window.pageYOffset
     let newHidden = this.state.hidden
 
